@@ -1,0 +1,483 @@
+
+
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+
+.navbar{
+    height: 5rem;
+    display:flex;
+    align-items:center;
+    padding: 0 1rem;
+}
+
+.navbar-brand {
+    margin: 0 !important;
+    padding: 0.5rem 1rem !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.fa-studiovinari {
+    color: #E61E4D;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.navbar-nav {
+    padding: 0 1rem;
+}
+
+.nav-link{
+    color:#222222 !important;
+    padding: 0.5rem 1rem !important;
+    line-height: 1;
+}
+
+/* Search Bar Styles */
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    border: 1px solid #E61E4D !important;
+    border-radius: 2rem 0 0 2rem !important;
+    background: transparent !important;
+    padding: 0.7rem 20rem !important;
+    border-right: none !important;
+    min-width: 250px;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(230, 30, 77, 0.25) !important;
+}
+
+.search-input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+.search-btn {
+    border: 1px solid #E61E4D !important;
+    border-radius: 0 2rem 2rem 0 !important;
+    background: transparent !important;
+    color: #E61E4D !important;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #E61E4D !important;
+    color: white !important;
+}
+
+.input-group {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 2rem;
+    overflow: hidden;
+}
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+/*footer*/
+.f-info-links,.f-info-socials{
+    font-size:1.2rem;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap: 1rem;
+    margin-right:1.5rem;
+}
+
+.f-info-links a{
+    text-decoration:none;
+    color:#2222;
+}
+.f-info-links a:hover{
+    text-decoration:underline;
+    text-align:center;
+
+}
+
+
+.f-info-socials i{
+
+    font-size:1.2rem;
+    margin-right:2rem;
+}
+
+
+.f-info{
+    text-align:center;
+    height:8rem;
+    display:flex;
+    background-color: #F8F8F8;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-name{
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/*Cards*/
+.card{
+    border:none !important;
+    margin-bottom:2rem ;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top{
+    border-radius:2rem !important;
+    width:100%;
+    height: 20rem;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 1rem !important;
+}
+.card-text{
+    font-weight:400 !important;
+}
+.card-title{
+    font-weight: 600 !important;
+}
+.listing-link{
+    text-decoration:none;
+}
+
+/* Review Card Styles */
+.review-card {
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 12px !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.delete-review-btn {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    opacity: 0.6;
+}
+
+.delete-review-btn:hover {
+    opacity: 1;
+    background-color: #dc3545;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Responsive Styles */
+
+/* Tablets and below */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 0 0.5rem;
+    }
+    
+    .navbar-brand {
+        padding: 0.5rem 0.5rem !important;
+    }
+    
+    .fa-studiovinari {
+        font-size: 1.5rem;
+    }
+    
+    .navbar-nav {
+        padding: 0 0.5rem;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.95rem;
+    }
+    
+    .search-input {
+        min-width: 200px;
+        padding: 0.6rem 1rem !important;
+    }
+    
+    .search-btn {
+        padding: 0.6rem 0.75rem !important;
+    }
+    
+    .card-img-top {
+        height: 15rem;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        min-height: 4rem;
+        padding: 0.5rem;
+    }
+    
+    .navbar-brand {
+        padding: 0.5rem !important;
+        gap: 0.3rem;
+    }
+    
+    .fa-studiovinari {
+        font-size: 1.3rem;
+    }
+    
+    .navbar-nav {
+        padding: 0.5rem 0;
+    }
+    
+    .nav-link {
+        padding: 0.75rem 1rem !important;
+        text-align: center;
+    }
+    
+    .search-form {
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+    
+    .search-input {
+        min-width: 100%;
+        width: 100%;
+        padding: 0.6rem 1rem !important;
+    }
+    
+    .search-btn {
+        padding: 0.6rem 1rem !important;
+    }
+    
+    .card-img-top {
+        height: 12rem;
+    }
+    
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .f-info {
+        height: auto;
+        padding: 1rem 0;
+    }
+    
+    .f-info-links,
+    .f-info-socials {
+        font-size: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .f-info-socials i {
+        margin-right: 1rem;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 0.9rem;
+    }
+    
+    .fa-studiovinari {
+        font-size: 1.2rem;
+    }
+    
+    .nav-link {
+        padding: 0.6rem 0.8rem !important;
+        font-size: 0.9rem;
+    }
+    
+    .search-input {
+        font-size: 0.9rem;
+    }
+    
+    .card-img-top {
+        height: 10rem;
+    }
+    
+    .card-body {
+        padding: 0.8rem !important;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .card-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .search-input {
+        min-width: 300px;
+    }
+}
+
+/* Filters Responsive Styles */
+#filters {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    padding-left: 1rem !important;
+    padding-right: 1rem;
+}
+
+#filters::-webkit-scrollbar {
+    height: 6px;
+}
+
+#filters::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+#filters::-webkit-scrollbar-thumb {
+    background: #E61E4D;
+    border-radius: 10px;
+}
+
+.filters {
+    margin-right: 2rem !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 1rem !important;
+    flex-shrink: 0;
+}
+
+.filters i {
+    font-size: 1.3rem;
+}
+
+.filters p {
+    font-size: 0.7rem;
+    margin-top: 0.2rem;
+}
+
+@media (max-width: 768px) {
+    #filters {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem;
+    }
+    
+    .filters {
+        margin-right: 1.5rem !important;
+    }
+    
+    .filters i {
+        font-size: 1.2rem;
+    }
+    
+    .filters p {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .filters {
+        margin-right: 1rem !important;
+    }
+    
+    .filters i {
+        font-size: 1.1rem;
+    }
+    
+    .filters p {
+        font-size: 0.6rem;
+    }
+}
+
+/* Show Page Responsive Styles */
+@media (max-width: 768px) {
+    .show-page-img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 250px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .show-page-content {
+        padding: 0 1rem;
+    }
+    
+    .show-page-details {
+        font-size: 0.95rem;
+    }
+    
+    #map {
+        height: 300px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .show-page-img {
+        height: 200px !important;
+    }
+    
+    .show-page-content h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    .show-page-content h3 {
+        font-size: 1.25rem !important;
+    }
+    
+    .show-page-details {
+        font-size: 0.9rem;
+    }
+    
+    .show-page-details li {
+        margin-bottom: 1rem !important;
+    }
+    
+    #map {
+        height: 250px !important;
+    }
+    
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem !important;
+    }
+    
+    .rating-group label {
+        font-size: 1.5rem !important;
+    }
+}

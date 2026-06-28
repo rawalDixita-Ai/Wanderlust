@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant - Wanderlust</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/chatbot.css">
+</head>
+<body>
+    <div class="chatbot-container">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="d-flex align-items-center">
+                <i class="fa-solid fa-robot me-2"></i>
+                <div>
+                    <h5 class="mb-0">AI Wanderlust Assistant</h5>
+                    <small class="text-light">Always here to help</small>
+                </div>
+            </div>
+            <button class="btn-close btn-close-white" id="closeChat"></button>
+        </div>
+
+        <!-- Chat Messages -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <strong>👋 Welcome!</strong><br><br>
+                    I'm your AI travel assistant. I can help you with:<br><br>
+                    <div class="feature-buttons">
+                        <button class="feature-btn" data-feature="trip">
+                            <i class="fa-solid fa-map-location-dot"></i><br>
+                            <strong>Trip Planner</strong><br>
+                            <small>Design your itinerary</small>
+                        </button>
+                        <button class="feature-btn" data-feature="review">
+                            <i class="fa-solid fa-star"></i><br>
+                            <strong>Review Summary</strong><br>
+                            <small>Summarize reviews</small>
+                        </button>
+                        <button class="feature-btn" data-feature="price">
+                            <i class="fa-solid fa-indian-rupee-sign"></i><br>
+                            <strong>Price Insights</strong><br>
+                            <small>Smart pricing tips</small>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions" id="quickActions">
+            <button class="quick-action-btn" data-message="Plan a 3-day trip">
+                <i class="fa-solid fa-calendar-days"></i> Plan Trip
+            </button>
+            <button class="quick-action-btn" data-message="Summarize reviews">
+                <i class="fa-solid fa-file-lines"></i> Reviews
+            </button>
+            <button class="quick-action-btn" data-message="Is this price fair?">
+                <i class="fa-solid fa-tag"></i> Price Check
+            </button>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="chat-input">
+            <form id="chatForm">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        id="messageInput" 
+                        placeholder="Type your message..." 
+                        autocomplete="off"
+                        required
+                    >
+                    <button class="btn btn-send" type="submit">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating Chat Button -->
+    <button class="chat-toggle-btn" id="chatToggle">
+        <i class="fa-solid fa-comment-dots"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/chatbot.js"></script>
+</body>
+</html>

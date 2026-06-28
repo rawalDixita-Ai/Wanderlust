@@ -1,0 +1,92 @@
+<%- layout("/layouts/boilerplate") %>
+<style>
+#filters{
+    display:flex;
+    flex-wrap:nowrap;
+    white-space:nowrap;
+    padding-left: 2rem;
+}
+.filters{
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right:10rem;
+    margin-top:2rem;
+    margin-bottom:1.6rem;
+    opacity:0.7;
+    text-decoration: none;
+    color: inherit;
+}
+.filters:hover{
+    opacity:1;
+    cursor:pointer;
+}
+.filters.active{
+    opacity:1;
+    border-bottom: 2px solid #222;
+    padding-bottom: 0.5rem;
+}
+.filters p{
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+}
+.filters i{
+    font-size: 1.5rem;
+}
+</style>
+
+<div id="filters">
+    <a href="/listings" class="filters <%= currentCategory === 'popular' ? 'active' : '' %>">
+        <div><i class="fa-solid fa-fire"></i></div>
+        <p>popular</p>
+    </a>
+
+    <a href="/listings?category=beach" class="filters <%= currentCategory === 'beach' ? 'active' : '' %>">
+        <div><i class="fa-solid fa-umbrella-beach"></i></div>
+        <p>Beach</p>
+    </a>
+
+    <a href="/listings?category=castle" class="filters <%= currentCategory === 'castle' ? 'active' : '' %>">
+        <div><i class="fa-brands fa-fort-awesome"></i></div>
+        <p>Castle</p>
+    </a>
+
+    <a href="/listings?category=mountain" class="filters <%= currentCategory === 'mountain' ? 'active' : '' %>">
+        <div><i class="fa-solid fa-mountain"></i></div>
+        <p>Mountain</p>
+    </a>
+
+    <a href="/listings?category=amazing-pools" class="filters <%= currentCategory === 'amazing-pools' ? 'active' : '' %>">
+        <div><i class="fa-solid fa-person-swimming"></i></div>
+        <p>Amazing pools</p>
+    </a>
+
+    <a href="/listings?category=iconic-cities" class="filters <%= currentCategory === 'iconic-cities' ? 'active' : '' %>">
+        <div><i class="fa-solid fa-mountain-city"></i></div>
+        <p>Iconic cities</p>
+    </a>
+</div>
+    <div class="row g-3">
+        <% for (let listing of allListings) { %>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="card h-100">
+                <% 
+                let imgStyle = '';
+                if (listing.title === "Eco-Friendly Treehouse Retreat") {
+                    imgStyle = 'object-position: center 100%;';
+                }
+                %>
+                <a href="/listings/<%=listing._id%>">
+                    <img src="<%= listing.image.url %>" class="card-img-top" alt="<%= listing.title %>" style =<%= imgStyle %>>
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title"><a href="/listings/<%=listing._id%>" class="text-decoration-none text-dark"><%= listing.title %></a></h5>
+                    <p class="card-text">&#8377;<%= listing.price.toLocaleString("en-IN")%>/night</p>
+                    <a href="/listings/<%=listing._id%>" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    <% } %>
+</div>
