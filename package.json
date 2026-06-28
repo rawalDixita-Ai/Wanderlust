@@ -1,6 +1,6 @@
 {
-  "engines":{
-    "node":"26.1.0"
+  "engines": {
+    "node": "26.1.0"
   },
   "name": "airbnbclone",
   "version": "1.0.0",
@@ -17,6 +17,7 @@
   "type": "commonjs",
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
+    "cloudinary": "^2.10.0",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^6.0.0",
     "cookie-parser": "^1.4.7",
