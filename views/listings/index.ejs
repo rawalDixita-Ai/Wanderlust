@@ -79,7 +79,7 @@
                 }
                 %>
                 <a href="/listings/<%=listing._id%>">
-                    <img src="<%= listing.image.url %>" class="card-img-top" alt="<%= listing.title %>" style =<%= imgStyle %>>
+                    <img src="<%= listing.image && listing.image.url ? listing.image.url : 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800' %>" class="card-img-top" alt="<%= listing.title %>" style =<%= imgStyle %>>
                 </a>
                 <div class="card-body">
                     <h5 class="card-title"><a href="/listings/<%=listing._id%>" class="text-decoration-none text-dark"><%= listing.title %></a></h5>

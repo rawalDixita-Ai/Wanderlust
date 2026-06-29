@@ -11,7 +11,7 @@
       <div class="row justify-content-center">
             <div class="col-10 show-page-content">
                   <h3 class="mb-4">Listing Details:</h3>
-                  <img src="<%= listing.image ? listing.image.url : '/default-image.jpg' %>" alt="listing_img" class="show-page-img img-fluid">
+                  <img src="<%= listing.image && listing.image.url ? listing.image.url : 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800' %>" alt="listing_img" class="show-page-img img-fluid">
                   <h2 class="fw-bold text-center show-page-content" style="color: #E61E4D;"><%=listing.title%></h2>
             </div>
       </div>

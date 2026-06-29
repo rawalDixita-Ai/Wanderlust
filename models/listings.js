@@ -15,7 +15,7 @@ const listingSchema = new Schema({
         url: {
             type: String,
             default:
-                "https://unsplash.com/photos/swimming-pool-near-green-trees-during-daytime-BPTx2hSw2io",
+                "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
         },
     },
     price: {
