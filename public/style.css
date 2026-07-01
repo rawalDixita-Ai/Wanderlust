@@ -54,9 +54,10 @@ body{
     border: 1px solid #E61E4D !important;
     border-radius: 2rem 0 0 2rem !important;
     background: transparent !important;
-    padding: 0.7rem 20rem !important;
+    padding: 0.7rem 1.5rem !important;
     border-right: none !important;
-    min-width: 250px;
+    min-width: 180px;
+    width: auto;
 }
 
 .search-input:focus {
